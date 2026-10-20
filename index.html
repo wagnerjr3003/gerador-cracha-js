@@ -19,13 +19,22 @@
    let nome = prompt("Digite seu nome:");
         let sobrenome = prompt("Digite seu sobrenome:");
         let anoNascimento = prompt("Digite o ano em que você nasceu:");
-        let ativo = prompt("Você está ativo na instituição? (sim ou não)");
+        let ativo = confirm("É aluno ativo da instituição?");
 
         alert(
             "Nome: " + nome + " " + sobrenome +
             "\nAno de nascimento: " + anoNascimento +
             "\nEstá ativo na instituição: " + ativo
         );
+     anoNascimento = Number(anoNascimento);
+    let anoAtual = new Date().getFullYear();
+        let idade = anoAtual - anoNascimento;
+        let sobrenomeMaiusculo = sobrenome.toUpperCase();
+        let quantidadeLetras = nome.length;
+        console.log("CRACHÁ VIRTUAL: " + sobrenomeMaiusculo + ", " + nome);
+        console.log("Idade estimada: " + idade + " anos.");
+        console.log("O seu primeiro nome tem " + quantidadeLetras + " letras.");
+        console.log("Estatuto de aluno ativo: " + ativo);
 
   </script>
 
